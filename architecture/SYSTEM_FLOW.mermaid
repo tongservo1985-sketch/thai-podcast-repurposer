@@ -1,0 +1,17 @@
+graph TD
+    A[Podcaster: Upload Audio/Link] --> B{AI Engine}
+    B --> C[Whisper V3: Thai Transcription]
+    C --> D[PyThaiNLP: Text Cleaning]
+    D --> E[LLM: Content Transformation]
+    E --> F[Output: Social Media Suite]
+    F --> G[User: One-Click Edit/Post]
+    
+    subgraph "The Overlord Brain"
+    E --> E1[FB Post Gen]
+    E --> E2[TikTok Script Gen]
+    E --> E3[SEO Blog Gen]
+    E --> E4[Thread Gen]
+    end
+
+    G --> H[Feedback Loop: Refine AI Style]
+    H --> E
