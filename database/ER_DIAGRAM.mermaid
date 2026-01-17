@@ -1,0 +1,50 @@
+erDiagram
+    USERS ||--o{ PODCASTS : owns
+    USERS ||--o{ USER_CREDITS : manages
+    PODCASTS ||--o{ EPISODES : contains
+    EPISODES ||--|| TRANSCRIPTIONS : "has one"
+    EPISODES ||--o{ SOCIAL_CONTENTS : generates
+    EPISODES ||--o{ PROCESSING_JOBS : tracks
+
+    USERS {
+        uuid id PK
+        string email
+        string plan_type
+        int credits_minutes
+    }
+
+    PODCASTS {
+        uuid id PK
+        uuid user_id FK
+        string title
+    }
+
+    EPISODES {
+        uuid id PK
+        uuid podcast_id FK
+        string audio_url
+        string status
+    }
+
+    TRANSCRIPTIONS {
+        uuid id PK
+        uuid episode_id FK
+        text full_text
+        jsonb segments
+    }
+
+    SOCIAL_CONTENTS {
+        uuid id PK
+        uuid episode_id FK
+        string platform
+        text content_text
+        jsonb metadata
+    }
+
+    PROCESSING_JOBS {
+        uuid id PK
+        uuid episode_id FK
+        string job_type
+        string status
+        text error_log
+    }
