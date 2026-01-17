@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://user:pass@db:5432/overlord
+      - REDIS_URL=redis://redis:6379/0
+      - S3_BUCKET=thai-podcast-media
+    depends_on:
+      - db
+      - redis
+
+  worker_transcription:
+    build: ./workers
+    command: celery -A tasks.worker worker --loglevel=info -Q transcription
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - ./models:/app/models
+
+  worker_content:
+    build: ./workers
+    command: celery -A tasks.worker worker --loglevel=info -Q content_gen
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: overlord
