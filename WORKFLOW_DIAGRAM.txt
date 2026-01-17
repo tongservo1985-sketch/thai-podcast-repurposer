@@ -1,0 +1,22 @@
+[USER ACTION: UPLOAD AUDIO]
+        |
+        v
+[ENGINE: THAI ASR + DIARIZATION] ----> [GENERATE RAW TRANSCRIPT]
+        |                                       |
+        |                                       v
+        |                          [AI ANALYSIS: KEY THEMES & QUOTES]
+        |                                       |
+        +---------------------------------------+
+        |
+        v
+[AI TRANSFORMATION LAYER]
+    |-- (Prompt A: Facebook Storytelling)
+    |-- (Prompt B: Threads Hook/Thread)
+    |-- (Prompt C: TikTok Visual Script)
+    |-- (Prompt D: SEO Article)
+        |
+        v
+[UI: MULTI-PLATFORM EDITOR] <---- [USER EDITS & REFINES]
+        |
+        v
+[FINAL ACTION: COPY / EXPORT / PUBLISH]
