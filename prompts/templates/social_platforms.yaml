@@ -1,0 +1,22 @@
+facebook_longform:
+  description: "Detailed summary for Facebook Pages"
+  structure:
+    hook: "A compelling question or a shocking stat from the episode."
+    body: "3-5 key takeaways explained clearly."
+    cta: "Invite users to listen to the full episode and comment."
+  prompt_extension: "Write in a style that encourages 'Shares'. Use a tone that feels like a friend sharing valuable knowledge."
+
+threads_punchy:
+  description: "Short, engaging snippets for Threads/X"
+  structure:
+    thread_start: "A bold statement."
+    points: "1-5 short sentences."
+  prompt_extension: "Maximum 280 characters per post. Focus on 'Controversial' or 'Deeply Relatable' insights."
+
+tiktok_script:
+  description: "Hook-driven script for short-form video"
+  structure:
+    hook_0_3s: "Visual/Verbal hook to stop the scroll."
+    value_3_15s: "The meat of the content."
+    loop_outro: "A transition that loops back to the start."
+  prompt_extension: "Use high-energy Thai slang (e.g., 'ตัวแม่', 'ปังมาก', 'สรุปให้แล้ว')."
