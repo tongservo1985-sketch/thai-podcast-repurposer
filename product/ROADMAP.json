@@ -1,0 +1,30 @@
+{
+  "project_name": "ThaiPodAI_Overlord",
+  "version": "1.0.0",
+  "milestones": [
+    {
+      "phase": "Q1: Foundation",
+      "goals": [
+        "High-accuracy Thai ASR (Speech-to-Text) with speaker diarization",
+        "Initial 'Social Media Suite' (Facebook, Twitter, LinkedIn summaries)",
+        "Beta launch with 10 Thai Podcast partners"
+      ]
+    },
+    {
+      "phase": "Q2: Personalization",
+      "goals": [
+        "Custom Tone-of-Voice training for individual creators",
+        "Automatic 'Short-form Video' script generation with timecodes",
+        "SEO Blog generator with Thai keyword optimization"
+      ]
+    },
+    {
+      "phase": "Q3: Ecosystem",
+      "goals": [
+        "Direct integration with WordPress and Social Media Schedulers",
+        "AI-generated 'Show Notes' for Spotify/Apple Podcasts",
+        "Expansion into Thai-English mixed-language (Thai-glish) optimization"
+      ]
+    }
+  ]
+}
