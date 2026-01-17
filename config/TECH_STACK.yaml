@@ -1,0 +1,24 @@
+infrastructure:
+  cloud_provider: AWS (Region: ap-southeast-1 Singapore for low latency)
+  database: PostgreSQL (Metadata) + Pinecone (Vector Store for RAG)
+  storage: AWS S3 (High-fidelity audio storage)
+
+ai_engine:
+  speech_to_text:
+    primary: "OpenAI Whisper v3 (Fine-tuned for Thai dialects)"
+    secondary: "Google Cloud Speech-to-Text (Thai-specialized)"
+  llm_orchestration:
+    model: "GPT-4o or Claude 3.5 Sonnet"
+    prompt_framework: "LangChain / LangGraph for multi-step content transformation"
+  thai_nlp_tools:
+    - "PyThaiNLP for tokenization and word segment validation"
+    - "Custom Thai Stopword filters for cleaner transcriptions"
+
+frontend:
+  framework: "Next.js 14 (App Router)"
+  styling: "Tailwind CSS + ShadcnUI"
+  state_management: "TanStack Query"
+
+backend:
+  framework: "Python FastAPI"
+  task_queue: "Celery + Redis (for heavy audio processing)"
